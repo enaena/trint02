@@ -1,3 +1,39 @@
-// Place all the styles related to the top controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+$bb: #0073d7;
+$by: #d9e021;
+
+// フッター
+
+footer{
+  height: 80px;
+  width: 100vw;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-left{
+  display: flex;
+  margin-left: 20px;
+  &.logo{
+    width: 100px;
+  }
+  &.text{
+    font-size: 10px;
+    color: white;
+  }
+}
+
+.footer-right{
+  display: flex;
+  margin-right: 20px;
+  &.text{
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    &:hover{
+      color: $by;
+    }
+  }
+
+}
