@@ -1,24 +1,47 @@
-# README
+## users
+| Column             | Type    | Options     |
+| ------------------ | ------- | ----------- |
+| nickname           | string  | null: false |
+| email              | string  | null: false |
+| encrypted_password | string  | null: false |
+| age_id             | integer | null: false |
+| sex_id             | integer | null: false |
+| level_id           | integer | null: false |
+| history            | string  |             |
+| profile            | text    |             |
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Association
+- has_many :event_users
+- has_many :events
 
-Things you may want to cover:
 
-* Ruby version
+## user_events
+| Column   | Type       | Options                        |
+| -------- | ---------- | ------------------------------ |
+| user     | references | null: false, foreign_key: true |
+| event    | references | null: false, foreign_key: true |
 
-* System dependencies
+### Association
+- belongs_to :user
+- belongs_to :event
 
-* Configuration
 
-* Database creation
+## events
+| Column       | Type       | Options                        |
+| ------------ | ---------- | ------------------------------ |
+| title        | string     | null: false                    |
+| day          | date       | null: false                    |
+| start_time   | time       | null: false                    |
+| end_time     | time       | null: false                    |
+| place        | string     | null: false                    |
+| place_url    | string     |                                |
+| levelev_id   | integer    | null: false                    |
+| limit        | string     |                                |
+| number       | string     | null: false                    |
+| cost         | string     | null: false                    |
+| text         | text       | null: false                    |
+| user         | references | null: false, foreign_key: true |
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Association
+- has_many :event_users
+- has_many :users
