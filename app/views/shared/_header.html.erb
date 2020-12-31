@@ -1,0 +1,24 @@
+<header>
+
+  <div class="header-left">
+    <%= image_tag "logo.svg" , class:"header-left logo" %>
+  </div>
+
+  <div class='header-right'>
+    <ul class='header-right list'>
+      <li><%= link_to "イベントを作成する","/", class:"text" %></li>
+      <li><%= link_to "イベントを探す","/", class:"text" %></li>
+    </ul>
+    <div class='header-right btn'>
+      <%= link_to "/", class:"login-btn" do %>
+      <span class='btn-a'>login</span><span class='btn-b'>ログイン</span>
+      <% end %>
+      <%= link_to "/", class:"login-btn" do %>
+      <span class='btn-a'>NEW</span><span class='btn-b'>新規登録</span>
+      <% end %>
+    </div>
+  </div>
+
+</header>
+
+<div class="">

@@ -1,5 +1,92 @@
 $bb: #0073d7;
 $by: #d9e021;
+/* リセットCSS */
+
+body { 
+  font-family: "Noto Sans JP"; 
+  margin: 0;
+}
+
+// ヘッダー
+header{
+  height: 80px;
+  width: 100vw;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+.header-left{
+  margin-left: 20px;
+  &.logo{
+    width: 100px;
+    margin-right: 10px;
+  }
+}
+
+.header-right{
+  display: flex;
+  margin-right: 20px;
+  &.list{
+    list-style: none;
+    & .text{
+      font-size: 10px;
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      &:hover{
+        color: $by;
+      }
+    }
+  }
+  &.btn{
+    display: flex;
+    & .login-btn{
+      position: relative;
+      width: 100px;
+      height: 35px;
+      margin-left: 20px;
+      & span{
+        position: absolute;
+        top: 10px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        font-size: 12px;
+        letter-spacing: 2px;
+        font-weight: bold;
+        text-decoration: none;
+        line-height: 35px;
+        text-align: center;
+        transition: all 0.3s;
+        transform-origin: center center -15px;
+      }
+      & .btn-b {
+        background-color: $by;
+        color:  black;
+        transform: rotateX(-90deg);
+      }
+      & .btn-a {
+        background-color: white;
+        color: black;
+        transform: rotateX(0);
+      }
+      &:hover {
+        & .btn-b {
+          transform: rotateX(0);
+        }
+        & .btn-a {
+          transform: rotateX(90deg);
+        }
+      }
+    }
+  }
+}
+
 
 // フッター
 
@@ -17,8 +104,9 @@ footer{
   margin-left: 20px;
   &.logo{
     width: 100px;
+    margin-right: 10px;
   }
-  &.text{
+  & .text{
     font-size: 10px;
     color: white;
   }
@@ -27,13 +115,13 @@ footer{
 .footer-right{
   display: flex;
   margin-right: 20px;
-  &.text{
+  & .text{
     color: white;
     text-decoration: none;
-    font-size: 12px;
+    font-size: 10px;
+    margin-right: 20px;
     &:hover{
       color: $by;
     }
   }
-
 }

@@ -1,3 +1,114 @@
+@charset "UTF-8";
+/* リセットCSS */
+body {
+  font-family: "Noto Sans JP";
+  margin: 0;
+}
+
+header {
+  height: 80px;
+  width: 100vw;
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  z-index: 10;
+}
+
+.header-left {
+  margin-left: 20px;
+}
+
+.header-left.logo {
+  width: 100px;
+  margin-right: 10px;
+}
+
+.header-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 20px;
+}
+
+.header-right.list {
+  list-style: none;
+}
+
+.header-right.list .text {
+  font-size: 10px;
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.header-right.list .text:hover {
+  color: #d9e021;
+}
+
+.header-right.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header-right.btn .login-btn {
+  position: relative;
+  width: 100px;
+  height: 35px;
+  margin-left: 20px;
+}
+
+.header-right.btn .login-btn span {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-decoration: none;
+  line-height: 35px;
+  text-align: center;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-transform-origin: center center -15px;
+          transform-origin: center center -15px;
+}
+
+.header-right.btn .login-btn .btn-b {
+  background-color: #d9e021;
+  color: black;
+  -webkit-transform: rotateX(-90deg);
+          transform: rotateX(-90deg);
+}
+
+.header-right.btn .login-btn .btn-a {
+  background-color: white;
+  color: black;
+  -webkit-transform: rotateX(0);
+          transform: rotateX(0);
+}
+
+.header-right.btn .login-btn:hover .btn-b {
+  -webkit-transform: rotateX(0);
+          transform: rotateX(0);
+}
+
+.header-right.btn .login-btn:hover .btn-a {
+  -webkit-transform: rotateX(90deg);
+          transform: rotateX(90deg);
+}
+
 footer {
   height: 80px;
   width: 100vw;
@@ -22,9 +133,10 @@ footer {
 
 .footer-left.logo {
   width: 100px;
+  margin-right: 10px;
 }
 
-.footer-left.text {
+.footer-left .text {
   font-size: 10px;
   color: white;
 }
@@ -36,13 +148,14 @@ footer {
   margin-right: 20px;
 }
 
-.footer-right.text {
+.footer-right .text {
   color: white;
   text-decoration: none;
-  font-size: 12px;
+  font-size: 10px;
+  margin-right: 20px;
 }
 
-.footer-right.text:hover {
+.footer-right .text:hover {
   color: #d9e021;
 }
 /*# sourceMappingURL=top.css.map */
