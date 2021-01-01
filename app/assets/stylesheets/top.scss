@@ -8,6 +8,7 @@ body {
 }
 
 // ヘッダー
+
 header{
   height: 80px;
   width: 100vw;
@@ -32,7 +33,7 @@ header{
   &.list{
     list-style: none;
     & .text{
-      font-size: 10px;
+      font-size: 12px;
       color: white;
       text-decoration: none;
       margin-left: 20px;
@@ -47,7 +48,7 @@ header{
     display: flex;
     & .login-btn{
       position: relative;
-      width: 100px;
+      width: 130px;
       height: 35px;
       margin-left: 20px;
       & span{
@@ -122,6 +123,244 @@ footer{
     margin-right: 20px;
     &:hover{
       color: $by;
+    }
+  }
+}
+
+
+// コンテンツ01
+
+@import "mixin";
+
+.contents-01{
+  height: 650px;
+  width: 100vw;
+  background-color: black;
+  overflow: hidden;
+  position: relative;
+}
+
+.scroll{
+  position: absolute;
+  width: 15px;
+  z-index: 20;
+  margin: 400px 0 0 30px;
+}
+
+.contents-01-text{
+  position: absolute;
+  z-index: 10;
+  & .main-text{
+    margin: 50px 0 0 80px;
+    font-size: 250px;
+    line-height: 200px;
+    letter-spacing: 5px;
+    color: white;
+    font-family: 'Staatliches', cursive;
+    text-shadow: 1px 2px 10px #333333;
+  }
+  & .sub-text{
+    margin: 10px 0 0 90px;
+    font-size: 50px;
+    line-height: 60px;
+    letter-spacing: 3px;
+    color: white;
+    font-family: 'Staatliches', cursive;
+    text-shadow: 1px 2px 10px #333333;
+  }
+}
+
+.contents-01-bg{
+  position: relative;
+  position: absolute;
+  height: 650px;
+  width: 800px;
+  overflow: hidden;
+  background-color: black;
+  & .img-bg{
+    height: 680px;
+    width: 830px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    left: -10px;
+    opacity: 60%;
+    object-fit: cover;
+    object-position: 20% 100%;
+    filter: blur(10px);
+  }
+}
+
+.img-main{
+  width: 80vw;
+  height: 570px;
+  vertical-align: bottom;
+  object-fit: cover;
+  object-position: 0% 0%;
+}
+
+.cover-slide {
+  position: relative;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 80vw;
+  height: 570px;
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+  }
+  &.inview {
+    &::after {
+      opacity: 1;
+      @include animation(
+        $name: kf-cover-slide,
+        $duration: 1.6s,
+        $timing-function: ease-in-out
+      );
+    }
+  }
+}
+
+@keyframes kf-cover-slide {
+  0%{
+    left: 100%;
+    right: 0;
+  }  
+  50%{
+    left: 0;
+    right: 0;
+  }  
+  100%{
+    left: 0;
+    right: 100%;
+  }  
+}
+
+.img-main {
+  opacity: 0;
+  .inview & {
+    @include animation(
+      $name: kf-img-show,
+      $duration: 1.6s,
+      $timing-function: ease-in-out,
+    );
+  }
+}
+
+@keyframes kf-img-show {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  50.1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+// コンテンツ02
+
+.contents-02{
+  background-color: $bb;
+  overflow: hidden;
+  text-align: center;
+}
+
+.top-box{
+  width: 100vw;
+  height: 50px;
+  background-color: black;
+}
+
+.contents-02-text{
+  margin: 50px 80px 0 80px;
+  & .logo{
+    width: 20vw;
+    }
+  & .text-01{
+    font-size: 12px;
+    color: white;
+    margin-bottom: 20px;
+  }
+}
+
+.contents-02-img{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  & .img{
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+  }
+}
+
+.explanation{
+  margin-top: 50px;
+  width: 100vw;
+}
+.bottm-box{
+  margin-top: -10px;
+  width: 100vw;
+  height: 50px;
+  background-color: $bb;
+}
+
+// コンテンツ03
+
+.contents-03{
+  height: 500px;
+  margin: 0 80px;
+}
+
+.info-title{
+  font-size: 50px;
+  padding-bottom: 10px;
+  font-family: 'Staatliches', cursive;
+  border-bottom: 2px solid black;
+  margin: 80px 0 0 0;
+}
+
+.info{
+  height: 100px;
+  border-bottom: 1px solid black;
+  display: flex;
+  align-items: center;
+  & .day{
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0 20px;
+  }
+  & .item{
+    background-color: $bb;
+    font-size: 12px;
+    letter-spacing: 2px;
+    line-height: 20px;
+    color: white;
+    text-align: center;
+    width: 80px;
+    height: 20px;
+    margin-right: 20px;
+  }
+  & .text{
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    &:hover{
+      color: $bb;
     }
   }
 }
