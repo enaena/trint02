@@ -1,0 +1,125 @@
+<div class='event'>
+
+  <div class='event-title'>
+    <h1 class='title'>EVENT DETAILS</h1>
+    <p class='text'>イベント詳細</p>
+  </div>
+
+  <div class='event-show'>
+
+    <div class='event-show-side'>
+
+      <div class='event-show-user'>
+        <%= link_to image_tag(@event.user.image, class: "show-user-img"), "/" %>
+        <%= link_to @event.user.nickname, "/", class:'show-user-name'%>
+      </div>
+
+      <ul class='event-show-item'>
+
+        <li class='event-show-list'>
+          <div class="material-icons s">date_range</div>
+          <span class='date'>
+            <%= @event.day.year %>年
+            <%= @event.day.month %>月
+            <%= @event.day.day %>日
+            <% day = @event.day.wday %>
+            <% days = ["(日)", "(月)", "(火)", "(水)", "(木)", "(金)", "(土)"] %>
+            <% if days[day] == "(日)"%>
+              <span class='mon'><%= days[day] %></span>
+            <% elsif days[day] == "(土)"%>
+              <span class='sat'><%= days[day] %></span>
+            <% else %>
+              <%= days[day] %>
+            <% end %>
+          </span>
+        </li>
+
+        <li class='event-show-list'>
+          <div class="material-icons s">access_time</div>
+          <%= @event.start_time.hour %>時
+          <%= @event.start_time.min %>分〜
+          <%= @event.end_time.hour %>時
+          <%= @event.end_time.min %>分
+        </li>
+
+        <li class='event-show-list'>
+          <div class="material-icons s">sports_tennis</div>
+          <span class='lv'>参加Lv.</span>
+            <% if @event.levelev[:name] == "初級"%>
+              <div class='levelev level-02'><%= @event.levelev[:name] %></div>
+            <% elsif @event.levelev[:name] == "初中級"%>
+              <div class='levelev level-03'><%= @event.levelev[:name] %></div>
+            <% elsif @event.levelev[:name] == "中級"%>
+              <div class='levelev level-04'><%= @event.levelev[:name] %></div>
+            <% elsif @event.levelev[:name] == "中上級"%>
+              <div class='levelev level-05'><%= @event.levelev[:name] %></div>
+            <% elsif @event.levelev[:name] == "上級"%>
+              <div class='levelev level-06'><%= @event.levelev[:name] %></div>
+            <% elsif @event.levelev[:name] == "どなたでも"%>
+              <div class='levelev level-07'><%= @event.levelev[:name] %></div>
+            <% end %>
+        </li>
+
+        <% unless @event.limit == nil %>
+        <li class='event-show-list'>
+          <div class="material-icons s">pan_tool</div>
+          制限：<%= @event.limit %>
+        </li>
+        <% end %>
+
+        <li class='event-show-list'>
+          <%= link_to @event.place_url do %>
+            <div class="material-icons sp">room</div>
+          <% end %>
+          <%= @event.place %>
+        </li>
+
+        <li class='event-show-list'>
+          <div class="material-icons s">groups</div>
+          プレー人数：<%= @event.number %>人
+        </li>
+
+        <li class='event-show-list'>
+          <div class="material-icons s">payments</div>
+          <%= @event.cost %>円(一人あたり)
+        </li>
+
+      </ul>
+
+    </div>
+
+    <div class='event-show-main'>
+      <div class='title'><%= @event.title %></div>
+      <div class='text'><%= @event.text %></div>
+    </div>
+
+  </div>
+
+  <% if user_signed_in? %>
+    <%= form_with(model: [@event, @event_user], local: true) do |f| %>
+      <%= f.text_field :text, class:"input-participation", placeholder:"例）〇〇です。よろしくお願いします。" %>
+      <div class="submit">
+        <%= f.submit "イベントに参加する ＞", class:"submit joining" %> 
+      </div>
+    <% end %>
+  <% end %>
+
+  <div class="participant-bg">
+
+    <div class='participant-title'>
+      <h1 class='title'>CURRENT PARTCIPANTS</h1>
+      <p class='text'>現在の参加者</p>
+    </div>
+
+    <div class="participant-users">
+      <% @events.each do |event| %>
+        <div class='participant-user'>
+          <%= link_to image_tag(event.user.image, class: "user-img"), "/" %>
+          <%= link_to event.user.nickname, "/",class:"user-name" %>
+        </div>
+      <% end %>
+      </div>
+
+  </div>
+
+</div>
