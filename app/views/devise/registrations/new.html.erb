@@ -1,0 +1,105 @@
+<div class='reg'>
+
+<div class='reg-title'>
+  <h1 class='title'>REGISTRATION</h1>
+  <p class='text'>会員情報入力</p>
+</div>
+
+<%= form_with model: @user, url: user_registration_path, local: true do |f| %>
+<%= render 'shared/error_messages', model: f.object %>
+
+  <div class="field">
+    <%= f.label "プロフィール写真", class:"item" %>
+    <div class="mandatory">必須</div>
+    <div class="input">
+    <div class="input image">
+    <div class="material-icons n">publish</div>
+    <%= f.label :image, "UPLOAD" %>
+    <%= f.file_field :image, class:"image-form" %>
+    </div>
+    </div>
+  </div>
+
+  <div class="field">
+    <%= f.label "ニックネーム", class:"item" %>
+    <div class="mandatory">必須</div>
+    <div class="input">
+    <%= f.text_field :nickname, class:"input n" %>
+    </div>
+  </div>
+
+  <div class="field">
+    <%= f.label "メールアドレス", class:"item" %>
+    <div class="mandatory">必須</div>
+    <div class="input">
+    <%= f.email_field :email,autocomplete: "email", class:"input n" %>
+    </div>
+  </div>
+
+  <div class="field">
+    <%= f.label "パスワード", class:"item" %>
+    <% if @minimum_password_length %>
+    <% end %>
+    <div class="mandatory">必須</div>
+    <div class="input">
+    <%= f.password_field :password, autocomplete: "new-password", class:"input n" %>
+    </div>
+  </div>
+
+  <div class="field">
+    <%= f.label "パスワード(確認用)", class:"item" %>
+    <div class="mandatory">必須</div>
+    <div class="input">
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"input n" %>
+    </div>
+  </div>
+
+  <div class="field">
+    <%= f.label "年代", class:"item" %>
+    <div class="mandatory">必須</div>
+    <div class="input">
+    <%= f.collection_select(:age_id, Age.all, :id, :name, {}, class:"input hash")%>
+    </div>
+  </div>
+
+  <div class="field">
+    <%= f.label "性別", class:"item" %>
+    <div class="mandatory">必須</div>
+    <div class="input">
+    <%= f.collection_select(:sex_id, Sex.all, :id, :name, {}, class:"input hash")%>
+    </div>
+  </div>
+
+  <div class="field">
+    <%= f.label "レベル", class:"item" %>
+    <div class="mandatory">必須</div>
+    <div class="input">
+    <%= f.collection_select(:level_id, Level.all, :id, :name, {}, class:"input hash")%>
+    </div>
+  </div>
+
+  <div class="field">
+    <%= f.label "テニス歴", class:"item" %>
+    <div class="any">任意</div>
+    <div class="input">
+    <%= f.text_field :history, class:"input short" %>
+    <span class="input text">年</span>
+    </div>
+  </div>
+
+  <div class="field long">
+    <%= f.label "自己紹介文", class:"item" %>
+    <div class="any">任意</div>
+    <div class="input">
+    <%= f.text_area :profile, class:"input long" %>
+    </div>
+  </div>
+
+  <%# <input type="image" src="../assets/images/new.svg" > %>
+  <div class="submit">
+    <%= f.submit "新 規 登 録  ＞" ,class:"submit reg"%> 
+  </div>
+
+<% end %>
+
+</div>

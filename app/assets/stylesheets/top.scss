@@ -76,8 +76,15 @@ header{
         color: black;
         transform: rotateX(0);
       }
+      & .btn-c{
+        background-color: #333333;
+        color: black;
+        color: white;
+        transform: rotateX(-90deg);
+      }
       &:hover {
-        & .btn-b {
+        & .btn-b,
+        & .btn-c {
           transform: rotateX(0);
         }
         & .btn-a {

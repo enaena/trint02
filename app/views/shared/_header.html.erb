@@ -1,7 +1,7 @@
 <header>
 
   <div class="header-left">
-    <%= image_tag "logo.svg" , class:"header-left logo" %>
+    <%= link_to image_tag("logo.svg" , class:"header-left logo"), "/" %>
   </div>
 
   <div class='header-right'>
@@ -9,16 +9,28 @@
       <li><%= link_to "イベントを作成する","/", class:"text" %></li>
       <li><%= link_to "イベントを探す","/", class:"text" %></li>
     </ul>
+  
+  <% if user_signed_in? %>
     <div class='header-right btn'>
-      <%= link_to "/", class:"login-btn" do %>
+      <%= link_to "#", class:"login-btn" do %>
+      <span class='btn-a'><%=current_user.nickname%></span><span class='btn-b'>マイページ</span>
+      <% end %>
+      <%= link_to destroy_user_session_path,method: :delete, class:"login-btn" do %>
+      <span class='btn-a'>LOGOUT</span><span class='btn-c'>ログアウト</span>
+      <% end %>
+    </div>
+
+  <% else %>
+    <div class='header-right btn'>
+      <%= link_to new_user_session_url, class:"login-btn" do %>
       <span class='btn-a'>LOGIN</span><span class='btn-b'>ログイン</span>
       <% end %>
-      <%= link_to "/", class:"login-btn" do %>
+      <%= link_to new_user_registration_url, class:"login-btn" do %>
       <span class='btn-a'>NEW</span><span class='btn-b'>新規登録</span>
       <% end %>
     </div>
+  <% end %>
+
   </div>
 
 </header>
-
-<div class="">

@@ -1,0 +1,163 @@
+@charset "UTF-8";
+/* エラーメッセージ */
+.error-alert {
+  white-space: pre-line;
+  line-height: 70%;
+  margin-left: 80px;
+}
+
+.error-message {
+  font-size: 12px;
+  color: red;
+  list-style-type: square;
+}
+
+.session {
+  height: 90vh;
+  background-color: white;
+}
+
+.session-title,
+.reg-title {
+  margin: 20px 0 0 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.session-title .title,
+.reg-title .title {
+  font-size: 60px;
+  font-family: 'Staatliches', cursive;
+  letter-spacing: 2px;
+  margin-right: 20px;
+}
+
+.session-title .text,
+.reg-title .text {
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.field {
+  margin: 0px 80px;
+  overflow: hidden;
+  height: 150px;
+  border-bottom: 1px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.field .item {
+  position: absolute;
+  left: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.field .input {
+  position: absolute;
+  background-color: #f2f2f2;
+  border: none;
+  left: 100px;
+  height: 40px;
+}
+
+.field .input.n {
+  width: 300px;
+}
+
+.field .input.hash {
+  width: 200px;
+}
+
+.field .input.long {
+  margin-top: -100px;
+  width: 600px;
+  height: 230px;
+}
+
+.field .input.image {
+  width: 150px;
+  height: 35px;
+  font-size: 14px;
+  font-weight: bold;
+  border: 2px solid black;
+  color: black;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.field .input.image:hover {
+  background-color: black;
+  color: white;
+}
+
+.field .input.text {
+  background-color: white;
+  font-size: 14px;
+  left: 260px;
+  top: 15px;
+}
+
+.image-form {
+  display: none;
+}
+
+.field.long {
+  height: 300px;
+}
+
+.mandatory {
+  position: absolute;
+  left: 150px;
+  width: 50px;
+  color: red;
+  font-size: 10px;
+}
+
+.any {
+  position: absolute;
+  left: 150px;
+  width: 50px;
+  color: skyblue;
+  font-size: 10px;
+}
+
+.submit {
+  margin: 0px 80px;
+}
+
+.submit.login, .submit.reg {
+  background-color: black;
+  height: 50px;
+  width: 100%;
+  margin: 40px 0;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  cursor: pointer;
+}
+
+.submit.login:hover, .submit.reg:hover {
+  opacity: 80%;
+}
+/*# sourceMappingURL=users.css.map */
