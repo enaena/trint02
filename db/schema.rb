@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_01_162012) do
+ActiveRecord::Schema.define(version: 2021_01_01_174413) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -33,6 +33,24 @@ ActiveRecord::Schema.define(version: 2021_01_01_162012) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
+  create_table "events", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "title", null: false
+    t.date "day", null: false
+    t.time "start_time", null: false
+    t.time "end_time", null: false
+    t.string "place", null: false
+    t.text "place_url"
+    t.integer "levelev_id", null: false
+    t.string "limit"
+    t.string "number", null: false
+    t.string "cost", null: false
+    t.text "text", null: false
+    t.bigint "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_events_on_user_id"
+  end
+
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -52,4 +70,5 @@ ActiveRecord::Schema.define(version: 2021_01_01_162012) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "events", "users"
 end
