@@ -18,7 +18,8 @@
 }
 
 .session-title,
-.reg-title {
+.reg-title,
+.event-title {
   margin: 20px 0 0 80px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -29,7 +30,8 @@
 }
 
 .session-title .title,
-.reg-title .title {
+.reg-title .title,
+.event-title .title {
   font-size: 60px;
   font-family: 'Staatliches', cursive;
   letter-spacing: 2px;
@@ -37,7 +39,8 @@
 }
 
 .session-title .text,
-.reg-title .text {
+.reg-title .text,
+.event-title .text {
   font-size: 12px;
   font-weight: bold;
   letter-spacing: 2px;
@@ -125,6 +128,39 @@
   height: 300px;
 }
 
+.field-time {
+  margin: 0px 80px;
+  overflow: hidden;
+  height: 150px;
+  border-bottom: 1px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.field-time .item {
+  position: absolute;
+  left: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.field-time .input-time {
+  border: none;
+  margin-left: 200px;
+}
+
+.field-time .input-time .time {
+  width: 60px;
+  height: 40px;
+  background-color: #f2f2f2;
+  border: none;
+}
+
 .mandatory {
   position: absolute;
   left: 150px;
@@ -145,11 +181,11 @@
   margin: 0px 80px;
 }
 
-.submit.login, .submit.reg {
+.submit.login, .submit.reg, .submit.create {
   background-color: black;
   height: 50px;
   width: 100%;
-  margin: 40px 0;
+  margin: 40px 0 100px 0;
   color: white;
   font-size: 12px;
   font-weight: bold;
@@ -157,7 +193,7 @@
   cursor: pointer;
 }
 
-.submit.login:hover, .submit.reg:hover {
+.submit.login:hover, .submit.reg:hover, .submit.create:hover {
   opacity: 80%;
 }
 /*# sourceMappingURL=users.css.map */

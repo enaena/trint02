@@ -6,8 +6,8 @@
 
   <div class='header-right'>
     <ul class='header-right list'>
-      <li><%= link_to "イベントを作成する","/", class:"text" %></li>
-      <li><%= link_to "イベントを探す","/", class:"text" %></li>
+      <li><%= link_to "イベントを作成する", new_event_path, class:"text" %></li>
+      <li><%= link_to "イベントを探す", events_path, class:"text" %></li>
     </ul>
   
   <% if user_signed_in? %>
