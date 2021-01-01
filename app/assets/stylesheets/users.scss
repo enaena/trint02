@@ -2,11 +2,9 @@
 
 .error-alert{
   white-space: pre-line;
-  display: flex;
-  justify-content: center;
   line-height: 70%;
+  margin-left: 80px;
 }
-
 .error-message{
   font-size: 12px;
   color: red;
