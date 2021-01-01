@@ -150,7 +150,8 @@ $by: #d9e021;
   margin: 0px 80px;
   &.login,
   &.reg,
-  &.create{
+  &.create,
+  &.joining{
   background-color: black;
   height: 50px;
   width: 100%;
@@ -165,3 +166,4 @@ $by: #d9e021;
   }
   }
 }
+

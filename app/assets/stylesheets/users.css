@@ -181,7 +181,7 @@
   margin: 0px 80px;
 }
 
-.submit.login, .submit.reg, .submit.create {
+.submit.login, .submit.reg, .submit.create, .submit.joining {
   background-color: black;
   height: 50px;
   width: 100%;
@@ -193,7 +193,7 @@
   cursor: pointer;
 }
 
-.submit.login:hover, .submit.reg:hover, .submit.create:hover {
+.submit.login:hover, .submit.reg:hover, .submit.create:hover, .submit.joining:hover {
   opacity: 80%;
 }
 /*# sourceMappingURL=users.css.map */

@@ -32,17 +32,18 @@
       
         <li class='level-title'>
           <% if event.levelev[:name] == "初級"%>
-            <div class='levelev level-02'><%= event.levelev[:name] %></div><% end %>
-          <% if event.levelev[:name] == "初中級"%>
-            <div class='levelev level-03'><%= event.levelev[:name] %></div><% end %>
-          <% if event.levelev[:name] == "中級"%>
-            <div class='levelev level-04'><%= event.levelev[:name] %></div><% end %>
-          <% if event.levelev[:name] == "中上級"%>
-            <div class='levelev level-05'><%= event.levelev[:name] %></div><% end %>
-          <% if event.levelev[:name] == "上級"%>
-            <div class='levelev level-06'><%= event.levelev[:name] %></div><% end %>
-          <% if event.levelev[:name] == "どなたでも"%>
-            <div class='levelev level-07'><%= event.levelev[:name] %></div><% end %>
+            <div class='levelev level-02'><%= event.levelev[:name] %></div>
+          <% elsif event.levelev[:name] == "初中級"%>
+            <div class='levelev level-03'><%= event.levelev[:name] %></div>
+          <% elsif event.levelev[:name] == "中級"%>
+            <div class='levelev level-04'><%= event.levelev[:name] %></div>
+          <% elsif event.levelev[:name] == "中上級"%>
+            <div class='levelev level-05'><%= event.levelev[:name] %></div>
+          <% elsif event.levelev[:name] == "上級"%>
+            <div class='levelev level-06'><%= event.levelev[:name] %></div>
+          <% elsif event.levelev[:name] == "どなたでも"%>
+            <div class='levelev level-07'><%= event.levelev[:name] %></div>
+          <% end %>
           <%= link_to event_path(event.id),class:"title" do %>
             <%= event.title %>
           <% end %>
