@@ -10,10 +10,10 @@
       <li><%= link_to "イベントを探す","/", class:"text" %></li>
     </ul>
     <div class='header-right btn'>
-      <%= link_to "/", class:"login-btn" do %>
+      <%= link_to new_user_session_url, class:"login-btn" do %>
       <span class='btn-a'>LOGIN</span><span class='btn-b'>ログイン</span>
       <% end %>
-      <%= link_to "/", class:"login-btn" do %>
+      <%= link_to new_user_registration_url, class:"login-btn" do %>
       <span class='btn-a'>NEW</span><span class='btn-b'>新規登録</span>
       <% end %>
     </div>
