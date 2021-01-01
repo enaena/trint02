@@ -1,0 +1,59 @@
+<div class='event'>
+
+  <div class='event-title'>
+    <h1 class='title'>EVENT LIST</h1>
+    <p class='text'>イベント一覧</p>
+  </div>
+
+<div class="event-list-box">
+
+  <div class='event-lists'>
+    <% @events.each do |event| %>
+      <ul class='event-list'>
+
+        <li class='status'>募集中</li>
+
+        <li class='date'>
+          <span class='date'>
+          <%= event.day.year %>年<br>
+          <%= event.day.month %>月
+          <%= event.day.day %>日
+          <% day = event.day.wday %>
+          <% days = ["(日)", "(月)", "(火)", "(水)", "(木)", "(金)", "(土)"] %>
+            <% if days[day] == "(日)"%>
+              <span class='mon'><%= days[day] %></span>
+            <% elsif days[day] == "(土)"%>
+              <span class='sat'><%= days[day] %></span>
+            <% else %>
+              <%= days[day] %>
+            <% end %>
+        </span>
+        </li>
+      
+        <li class='level-title'>
+          <% if event.levelev[:name] == "初級"%>
+            <div class='levelev level-02'><%= event.levelev[:name] %></div><% end %>
+          <% if event.levelev[:name] == "初中級"%>
+            <div class='levelev level-03'><%= event.levelev[:name] %></div><% end %>
+          <% if event.levelev[:name] == "中級"%>
+            <div class='levelev level-04'><%= event.levelev[:name] %></div><% end %>
+          <% if event.levelev[:name] == "中上級"%>
+            <div class='levelev level-05'><%= event.levelev[:name] %></div><% end %>
+          <% if event.levelev[:name] == "上級"%>
+            <div class='levelev level-06'><%= event.levelev[:name] %></div><% end %>
+          <% if event.levelev[:name] == "どなたでも"%>
+            <div class='levelev level-07'><%= event.levelev[:name] %></div><% end %>
+          <%= link_to event_path(event.id),class:"title" do %>
+            <%= event.title %>
+          <% end %>
+        </li>
+
+        <li class='organizer'>
+          <%= link_to image_tag(event.user.image, class: "user-img"), "/users/#{event.user.id}" %>
+          <%= link_to event.user.nickname, "/users/#{event.user.id}", class:'user-name'%>
+        </li>
+
+      </ul>
+    <% end %>
+  </div>
+</div>
