@@ -19,7 +19,8 @@
 }
 
 .session-title,
-.reg-title{
+.reg-title,
+.event-title{
   margin: 20px 0 0 80px;
   display: flex;
   align-items: center;
@@ -100,6 +101,31 @@
   height: 300px;
 }
 
+.field-time{
+  margin: 0px 80px;
+  overflow: hidden;
+  height: 150px;
+  border-bottom: 1px solid black;
+  display: flex;
+  align-items: center;
+  position: relative;
+  & .item{
+    position: absolute;
+    left: 20px;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  & .input-time{
+    border: none;
+    margin-left: 200px;
+    & .time{
+      width: 60px;
+      height: 40px;
+      background-color: #f2f2f2;
+      border: none;
+    }
+  }
+}
 
 
 .mandatory{
@@ -120,11 +146,12 @@
 .submit{
   margin: 0px 80px;
   &.login,
-  &.reg{
+  &.reg,
+  &.create{
   background-color: black;
   height: 50px;
   width: 100%;
-  margin: 40px 0 ;
+  margin: 40px 0 100px 0;
   color: white;
   font-size: 12px;
   font-weight: bold;

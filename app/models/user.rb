@@ -22,5 +22,6 @@ class User < ApplicationRecord
     belongs_to_active_hash :level
 
   has_one_attached :image
+  has_many :events
     
 end
