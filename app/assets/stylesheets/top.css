@@ -99,7 +99,16 @@ header {
           transform: rotateX(0);
 }
 
-.header-right.btn .login-btn:hover .btn-b {
+.header-right.btn .login-btn .btn-c {
+  background-color: #333333;
+  color: black;
+  color: white;
+  -webkit-transform: rotateX(-90deg);
+          transform: rotateX(-90deg);
+}
+
+.header-right.btn .login-btn:hover .btn-b,
+.header-right.btn .login-btn:hover .btn-c {
   -webkit-transform: rotateX(0);
           transform: rotateX(0);
 }
