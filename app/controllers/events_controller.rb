@@ -8,7 +8,7 @@ class EventsController < ApplicationController
   def create
     @event = Event.new(event_params)
     if @event.save
-      redirect_to root_path
+      render :create
     else
       render :new
     end
