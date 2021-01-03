@@ -136,9 +136,25 @@ footer{
 }
 
 
-// コンテンツ01
+
+// トップ
 
 @import "mixin";
+
+.top{
+  @include animation(
+    $name: kf-fadeIn,
+    $duration: 3s,
+    $timing-function: ease,
+  )
+}
+
+@keyframes kf-fadeIn {
+  0% {opacity: 0}
+  100% {opacity: 1} 
+}
+
+// コンテンツ01
 
 .contents-01{
   height: 650px;
