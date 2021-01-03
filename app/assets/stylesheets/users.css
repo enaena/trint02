@@ -84,9 +84,9 @@
 }
 
 .field .input.long {
-  margin-top: -100px;
-  width: 600px;
-  height: 230px;
+  margin-top: -280px;
+  width: 400px;
+  height: 600px;
 }
 
 .field .input.image {
@@ -125,7 +125,7 @@
 }
 
 .field.long {
-  height: 300px;
+  height: 700px;
 }
 
 .field-time {
@@ -195,5 +195,74 @@
 
 .submit.login:hover, .submit.reg:hover, .submit.create:hover, .submit.joining:hover {
   opacity: 80%;
+}
+
+.user-top-bg {
+  background-color: #0073d7;
+  height: 200px;
+}
+
+.user-show-user {
+  margin-top: -150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.user-show-user .user-name {
+  font-size: 40px;
+  font-weight: bold;
+  color: #333333;
+  text-decoration: none;
+}
+
+.user-show-user .user-img {
+  border-radius: 50%;
+  background-color: #B3B3B3;
+  width: 250px;
+  height: 250px;
+  border: 10px solid white;
+}
+
+.user-show-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.user-show-items .user-item {
+  margin-right: 20px;
+}
+
+.user-profile {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 50px;
+  white-space: pre-wrap;
+  text-align: center;
+  line-height: 28px;
+}
+
+.user-bottom-bg {
+  background-color: #f2f2f2;
+  padding: 20px 0 80px 0;
 }
 /*# sourceMappingURL=users.css.map */

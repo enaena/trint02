@@ -48,7 +48,7 @@
 
 .event-list-box {
   background-color: #f2f2f2;
-  padding: 80px 0;
+  padding: 80px 80px;
 }
 
 .event-list {
@@ -222,6 +222,7 @@
   width: 150px;
   height: 150px;
   margin: -100px 0 10px 0;
+  border: 5px solid white;
 }
 
 .event-show-side .event-show-user .show-user-name {
@@ -250,7 +251,7 @@
 }
 
 .material-icons.s {
-  font-size: 20px;
+  font-size: 18px;
   margin-right: 10px;
 }
 
@@ -276,6 +277,7 @@
 .event-show-main .text {
   font-size: 14px;
   color: black;
+  white-space: pre-wrap;
 }
 
 .input-participation {
@@ -285,11 +287,11 @@
 .participant-bg {
   background-color: #f2f2f2;
   margin-top: -50px;
-  height: 250px;
+  padding: 20px 0 80px 0;
 }
 
-.participant-title {
-  margin: 20px 0 0 80px;
+.event-title-mini {
+  margin-left: 80px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -298,14 +300,14 @@
           align-items: center;
 }
 
-.participant-title .title {
+.event-title-mini .title {
   font-size: 40px;
   font-family: 'Staatliches', cursive;
   letter-spacing: 2px;
   margin-right: 20px;
 }
 
-.participant-title .text {
+.event-title-mini .text {
   font-size: 12px;
   font-weight: bold;
   letter-spacing: 2px;
@@ -347,5 +349,9 @@
   background-color: #B3B3B3;
   width: 70px;
   height: 70px;
+}
+
+.space {
+  height: 100px;
 }
 /*# sourceMappingURL=events.css.map */
