@@ -12,7 +12,7 @@
   
   <% if user_signed_in? %>
     <div class='header-right btn'>
-      <%= link_to "#", class:"login-btn" do %>
+      <%= link_to "/users/#{current_user.id}", class:"login-btn" do %>
       <span class='btn-a'><%=current_user.nickname%></span><span class='btn-b'>マイページ</span>
       <% end %>
       <%= link_to destroy_user_session_path,method: :delete, class:"login-btn" do %>

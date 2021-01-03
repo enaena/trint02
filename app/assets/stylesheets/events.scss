@@ -45,7 +45,7 @@ $by: #d9e021;
 
 .event-list-box{
   background-color: #f2f2f2;
-  padding: 80px 0;
+  padding: 80px 80px;
 }
 
 .event-list{
@@ -172,6 +172,7 @@ $by: #d9e021;
       width: 150px;
       height: 150px;
       margin: -100px 0 10px 0;
+      border: 5px solid white;
     }
     & .show-user-name{
       font-size: 20px;
@@ -196,7 +197,7 @@ $by: #d9e021;
 
 .material-icons{
   &.s{
-  font-size: 20px;
+  font-size: 18px;
   margin-right: 10px;
   }
   &.sp{
@@ -219,6 +220,7 @@ $by: #d9e021;
   & .text{
     font-size: 14px;
     color: black;
+    white-space: pre-wrap;
   }
 }
 
@@ -229,11 +231,11 @@ $by: #d9e021;
 .participant-bg{
   background-color: #f2f2f2;
   margin-top: -50px;
-  height: 250px;
+  padding: 20px 0 80px 0;
 }
 
-.participant-title{
-  margin: 20px 0 0 80px;
+.event-title-mini{
+  margin-left: 80px;
   display: flex;
   align-items: center;
   & .title{
@@ -271,4 +273,7 @@ $by: #d9e021;
         height: 70px;
       }
     }
+}
+.space{
+  height: 100px;
 }
