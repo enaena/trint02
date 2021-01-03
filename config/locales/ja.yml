@@ -1,0 +1,21 @@
+ja:
+ activerecord:
+   attributes:
+     user:
+       image: プロフィール写真
+       nickname: ニックネーム
+       email : メールアドレス
+       encrypted_password: パスワード
+       age_id: 年代
+       sex_id: 性別
+       level_id: レベル
+     event:
+       title: イベント名
+       day: 開催日
+       start_time: 開始時間
+       end_time: 終了時間
+       place: 会場
+       levelev_id: 参加レベル
+       number: 募集人数
+       cost: 参加費
+       text: イベント内容
