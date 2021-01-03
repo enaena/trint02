@@ -189,6 +189,9 @@ footer {
   0% {
     opacity: 0;
   }
+  20% {
+    opacity: 0;
+  }
   100% {
     opacity: 1;
   }
@@ -196,6 +199,9 @@ footer {
 
 @keyframes kf-fadeIn {
   0% {
+    opacity: 0;
+  }
+  20% {
     opacity: 0;
   }
   100% {
@@ -302,8 +308,8 @@ footer {
   opacity: 1;
   -webkit-animation-name: kf-cover-slide;
           animation-name: kf-cover-slide;
-  -webkit-animation-duration: 1.6s;
-          animation-duration: 1.6s;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
   -webkit-animation-delay: 0s;
@@ -353,8 +359,8 @@ footer {
 .inview .img-main {
   -webkit-animation-name: kf-img-show;
           animation-name: kf-img-show;
-  -webkit-animation-duration: 1.6s;
-          animation-duration: 1.6s;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
   -webkit-animation-delay: 0s;

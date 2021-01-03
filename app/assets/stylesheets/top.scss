@@ -151,6 +151,7 @@ footer{
 
 @keyframes kf-fadeIn {
   0% {opacity: 0}
+  20% {opacity: 0}
   100% {opacity: 1} 
 }
 
@@ -245,7 +246,7 @@ footer{
       opacity: 1;
       @include animation(
         $name: kf-cover-slide,
-        $duration: 1.6s,
+        $duration: 3s,
         $timing-function: ease-in-out
       );
     }
@@ -272,7 +273,7 @@ footer{
   .inview & {
     @include animation(
       $name: kf-img-show,
-      $duration: 1.6s,
+      $duration: 3s,
       $timing-function: ease-in-out,
     );
   }
