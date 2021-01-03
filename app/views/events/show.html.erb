@@ -60,7 +60,7 @@
             <% end %>
         </li>
 
-        <% unless @event.limit == nil %>
+        <% unless @event.limit.blank? %>
         <li class='event-show-list'>
           <div class="material-icons s">pan_tool</div>
           制限：<%= @event.limit %>
@@ -68,9 +68,13 @@
         <% end %>
 
         <li class='event-show-list'>
+        <% unless @event.place_url.blank? %>
           <%= link_to @event.place_url do %>
             <div class="material-icons sp">room</div>
           <% end %>
+        <% else %>
+            <div class="material-icons s">room</div>
+        <% end %>
           <%= @event.place %>
         </li>
 
