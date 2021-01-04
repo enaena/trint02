@@ -71,7 +71,34 @@ password:111aaa
 ・試合結果が送信されるとそのコートの控えの選手に通知がいく<br>
 
 ## 利用方法
+<a href="https://gyazo.com/2bb9d781dba720cfec5a93cf8103bd02"><img src="https://i.gyazo.com/2bb9d781dba720cfec5a93cf8103bd02.gif" alt="Image from Gyazo" width="1000"/></a>
+TOPページの「NEW」ボタンからユーザー登録をします。<br><br>
 
+<a href="https://gyazo.com/07afd4bc32eab2374e2946fd7aa920f7"><img src="https://i.gyazo.com/07afd4bc32eab2374e2946fd7aa920f7.gif" alt="Image from Gyazo" width="1000"/></a>
+ユーザー登録が完了するとマイページが作成されます。<br>
+マイページにはユーザー登録の際に入力された内容と主催イベントが表示されます。<br>
+ユーザーは誰でもお互いのページを閲覧することがきます。<br><br>
+
+<a href="https://gyazo.com/61732cc4cfe36dfb3a01ba85206041aa"><img src="https://i.gyazo.com/61732cc4cfe36dfb3a01ba85206041aa.gif" alt="Image from Gyazo" width="1000"/></a>
+フッターの「イベントを作成する」ボタンからイベントを作成できます。<br>
+作成されたイベントはイベント一覧ページに表示されます。<br>
+イベントの一覧ページはフッターの「イベントを探す」ボタンから見ることことができます。<br>
+イベントの概要や主催者を確認することができます。<br><br>
+
+<a href="https://gyazo.com/c51d0692e3a8dd6ae06c5ad793fca11e"><img src="https://i.gyazo.com/c51d0692e3a8dd6ae06c5ad793fca11e.gif" alt="Image from Gyazo" width="1000"/></a>
+イベント名をクリックすると、そのイベントの詳細を確認することができます。<br>
+また、詳細ページではそのイベントに参加予定の他のユーザーも確認することができます。<br>
+イベントに参加したい場合は「イベントに参加する」ボタンを押します。<br><br>
+
+<a href="https://gyazo.com/1c5f08189b6c089b32af0435b6b4049b"><img src="https://i.gyazo.com/1c5f08189b6c089b32af0435b6b4049b.gif" alt="Image from Gyazo" width="1000"/></a>
+イベント作成の際に会場のURLを記入した場合は
+イベント詳細ページのアイコンに色がつきページに飛ぶことができます。<br><br>
+
+## 課題や今後実装したい機能
+まだ実装できていない残りの要件を達成したいと思っています。
+
+## データベース設計
+<a href="https://gyazo.com/461e8b9279c6b60daf1a4d6074cd8f3a"><img src="https://i.gyazo.com/461e8b9279c6b60daf1a4d6074cd8f3a.png" alt="Image from Gyazo" width="1181"/></a><br><br>
 
 ## 使用技術(開発環境)
 言語：Ruby、Rails、HTML5+CSS3、Sass<br>
