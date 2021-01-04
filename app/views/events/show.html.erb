@@ -10,8 +10,8 @@
     <div class='event-show-side'>
 
       <div class='event-show-user'>
-        <%= link_to image_tag(@event.user.image, class: "show-user-img"), "/" %>
-        <%= link_to @event.user.nickname, "/", class:'show-user-name'%>
+        <%= link_to image_tag(@event.user.image, class: "show-user-img"), "/users/#{@event.user.id}" %>
+        <%= link_to @event.user.nickname, "/users/#{@event.user.id}", class:'show-user-name'%>
       </div>
 
       <ul class='event-show-item'>
@@ -120,8 +120,8 @@
     <div class="participant-users">
       <% @events.each do |event| %>
         <div class='participant-user'>
-          <%= link_to image_tag(event.user.image, class: "user-img"), "/" %>
-          <%= link_to event.user.nickname, "/",class:"user-name" %>
+          <%= link_to image_tag(event.user.image, class: "user-img"), "/users/#{event.user.id}" %>
+          <%= link_to event.user.nickname, "/users/#{event.user.id}",class:"user-name" %>
         </div>
       <% end %>
       </div>

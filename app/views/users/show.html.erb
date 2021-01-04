@@ -23,7 +23,9 @@
               <% elsif @user.level[:name] == "どなたでも"%>
               <div class='levelev level-07'><%= @user.level[:name] %></div><% end %>
           </li>
+          <% unless @user.history.blank? %>
           <li class='user-item'>テニス歴<%= @user.history %>年</li>
+          <% end %>
         </ul>
 
         <div class='user-profile'><%= @user.profile %></div>

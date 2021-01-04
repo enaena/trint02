@@ -6,7 +6,7 @@ Trint
 誰でも気軽にテニスイベント(練習会・レッスン・トーナメントなど）を作成したり、参加することができます。<br> <br>
 
 ## URL
-https://trint.herokuapp.com/
+https://trint-2nd.herokuapp.com/
 
 ## テスト用アカウント
 email:test@com
@@ -72,6 +72,10 @@ password:111aaa
 
 ## 利用方法
 
+
+## 使用技術(開発環境)
+言語：Ruby、Rails、HTML5+CSS3、Sass<br>
+インフラ：Heroku、MySQL<br>
 
 ## users
 | Column             | Type    | Options     |

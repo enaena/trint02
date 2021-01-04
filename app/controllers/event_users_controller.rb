@@ -7,7 +7,7 @@ class EventUsersController < ApplicationController
   def create
     event_user = EventUser.new(event_user_params)
     if event_user.save
-      redirect_to root_path
+      render :create
     else
       render event_path
     end
