@@ -9,7 +9,8 @@
 
 .event-box {
   height: 300px;
-  margin: 0 80px 100px 80px;
+  width: 600px;
+  margin: 0 auto;
   background-color: #f2f2f2;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -49,6 +50,13 @@
   font-size: 14px;
   font-weight: bold;
   letter-spacing: 2px;
+}
+
+@media (max-width: 600px) {
+  .event-box {
+    width: 400px;
+    margin-top: 50px;
+  }
 }
 
 .event-list-box {
@@ -222,15 +230,16 @@
 }
 
 .event-show {
-  margin: 0 80px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 600px;
+  margin: 0 auto;
 }
 
 .event-show-side {
   background-color: #f2f2f2;
-  width: 250px;
+  width: 220px;
   height: 370px;
   margin-top: 100px;
 }
@@ -300,7 +309,7 @@
 }
 
 .event-show-main .title {
-  font-size: 25px;
+  font-size: 20px;
   font-weight: bold;
   color: black;
   padding-bottom: 5px;
@@ -325,7 +334,8 @@
 }
 
 .event-title-mini {
-  margin-left: 80px;
+  width: 600px;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -351,7 +361,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: 80px;
+  width: 600px;
+  margin: 0 auto;
+  overflow: auto;
 }
 
 .participant-users .participant-user {
@@ -387,5 +399,46 @@
 
 .space {
   height: 100px;
+}
+
+@media (max-width: 600px) {
+  .event-show {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 400px;
+  }
+  .event-show-side {
+    margin: 0 auto;
+    margin-top: 110px;
+    width: 400px;
+  }
+  .event-show-main {
+    margin-left: 0;
+  }
+  .event-title-mini {
+    width: 400px;
+    padding-left: 0;
+  }
+  .event-title-mini .title {
+    font-size: 30px;
+  }
+  .event-title-mini .text {
+    font-size: 10px;
+  }
+  .participant-users {
+    width: 400px;
+  }
+  .participant-users .participant-user {
+    margin-right: 20px;
+  }
+  .participant-users .participant-user .user-img {
+    width: 50px;
+    height: 50px;
+  }
+  .participant-bg {
+    padding: 20px 0 40px 0;
+  }
 }
 /*# sourceMappingURL=events.css.map */
