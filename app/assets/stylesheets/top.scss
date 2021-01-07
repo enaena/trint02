@@ -13,18 +13,18 @@ body {
 header{
   height: 80px;
   width: 100vw;
+  margin-top: 0;
   background-color: black;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 10;
+  z-index: 50;
+  position: fixed;
 }
-
 .header-left{
   margin-left: 20px;
   &.logo{
-    width: 100px;
-    margin-right: 10px;
+    width: 90px;
   }
 }
 
@@ -37,7 +37,7 @@ header{
       font-size: 12px;
       color: white;
       text-decoration: none;
-      margin-left: 20px;
+      margin-left: 10px;
       font-weight: bold;
       letter-spacing: 2px;
       &:hover{
@@ -49,7 +49,7 @@ header{
     display: flex;
     & .login-btn{
       position: relative;
-      width: 130px;
+      width: 100px;
       height: 35px;
       margin-left: 20px;
       & span{
@@ -112,7 +112,7 @@ footer{
   display: flex;
   margin-left: 20px;
   &.logo{
-    width: 100px;
+    width: 80px;
     margin-right: 10px;
   }
   & .text{
@@ -142,6 +142,7 @@ footer{
 @import "mixin";
 
 .top{
+  padding-top: 80px;
   @include animation(
     $name: kf-fadeIn,
     $duration: 3s,
@@ -280,17 +281,50 @@ footer{
 }
 
 @keyframes kf-img-show {
-  0% {
-    opacity: 0;
+  0% { opacity: 0; }
+  50% { opacity: 0; }
+  50.1% { opacity: 1; }
+  100% { opacity: 1;}
+}
+
+
+@media (max-width: 600px) {
+  .contents-01{
+    height: 500px;
   }
-  50% {
-    opacity: 0;
+  .scroll{
+    display: none;
   }
-  50.1% {
-    opacity: 1;
+
+  .contents-01-text{
+    position: absolute;
+    z-index: 10;
+    & .main-text{
+      margin: 50px 0 0 40px;
+      font-size: 150px;
+      line-height: 130px;
+    }
+    & .sub-text{
+      margin: 10px 0 0 50px;
+      font-size: 20px;
+      line-height: 30px;
+    }
   }
-  100% {
-    opacity: 1;
+
+  .contents-01-bg{
+    height: 550px;
+    width: 600px;
+    & .img-bg{
+      height: 550px;
+    }
+  }
+
+  .img-main{
+    height: 400px;
+    object-position: 50% 0%;
+  }
+  .cover-slide {
+    height: 400px;
   }
 }
 
@@ -312,7 +346,7 @@ footer{
 .contents-02-text{
   margin: 50px 80px 0 80px;
   & .logo{
-    width: 20vw;
+    width: 220px;
     }
   & .text-01{
     font-size: 12px;
@@ -320,6 +354,7 @@ footer{
     margin-bottom: 20px;
   }
 }
+
 
 .contents-02-img{
   display: flex;
@@ -334,13 +369,38 @@ footer{
 
 .explanation{
   margin-top: 50px;
-  width: 100vw;
+  display: flex;
+  & .explanation-img{
+    width: calc(100% / 3);
+  }
 }
+
 .bottm-box{
   margin-top: -10px;
   width: 100vw;
   height: 50px;
   background-color: $bb;
+}
+
+@media (max-width: 600px) {
+  .contents-02-text{
+    margin: 30px 80px 0 80px;
+    & .logo{
+      width: 150px;
+      }
+    & .text-01{
+      font-size: 10px;
+      margin-bottom: 20px;
+    }
+  }
+  .explanation{
+    flex-direction: column;
+    margin-top: 30px;
+    & .explanation-img{
+      width: 100vw;
+      margin: -10px 0;
+    }
+  }
 }
 
 // コンテンツ03
@@ -363,21 +423,25 @@ footer{
   border-bottom: 1px solid black;
   display: flex;
   align-items: center;
-  & .day{
-    font-size: 14px;
-    font-weight: bold;
-    margin: 0 20px;
-  }
-  & .item{
-    background-color: $bb;
-    font-size: 12px;
-    letter-spacing: 2px;
-    line-height: 20px;
-    color: white;
-    text-align: center;
-    width: 80px;
-    height: 20px;
-    margin-right: 20px;
+    & .day-item{
+      display: flex;
+      align-items: center;
+    & .day{
+      font-size: 14px;
+      font-weight: bold;
+      margin: 0 20px;
+    }
+    & .item{
+      background-color: $bb;
+      font-size: 12px;
+      letter-spacing: 2px;
+      line-height: 20px;
+      color: white;
+      text-align: center;
+      width: 80px;
+      height: 20px;
+      margin-right: 20px;
+    }
   }
   & .text{
     font-size: 18px;
@@ -386,6 +450,40 @@ footer{
     color: black;
     &:hover{
       color: $bb;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .contents-03{
+  height: 400px;
+  }
+   .info-title{
+    font-size: 40px;
+    margin-top: 50px;
+  }
+  .info{
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    & .day-item{
+        display: flex;
+        align-items: center;
+        & .day{
+          margin: 0 10px 0 0;
+        }
+        & .item{
+          font-size: 10px;
+          letter-spacing: 2px;
+          line-height: 15px;
+          width: 60px;
+          height: 15px;
+        }
+      }
+    & .text{
+      font-size: 14px;
     }
   }
 }

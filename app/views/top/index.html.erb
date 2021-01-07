@@ -31,7 +31,11 @@
       <%= image_tag "logo.svg", class:"logo" %>
     </div>
 
-  <%= image_tag "top_explanation.svg",class:'explanation'%>
+  <div class="explanation">
+    <%= image_tag "top_explanation_01.svg",class:'explanation-img'%>
+    <%= image_tag "top_explanation_02.svg",class:'explanation-img'%>
+    <%= image_tag "top_explanation_03.svg",class:'explanation-img'%>
+  </div>
   <div class="bottm-box"></div>
 
 </div>
@@ -43,18 +47,25 @@
   <p class="info-title">INFOMATION</p>
 
   <div class="info">
-    <p class="day">2020.12.11</p>
-    <p class="item">お知らせ</p>
+    <div class="day-item">
+      <p class="day">2020.12.11</p>
+      <p class="item">お知らせ</p>
+    </div>
     <%= link_to "リニューアルしました。新機能をお試しください！","/", class:"text" %>
   </div>
-    <div class="info">
-    <p class="day">2020.12.11</p>
-    <p class="item">お知らせ</p>
+
+  <div class="info">
+    <div class="day-item">
+      <p class="day">2020.12.11</p>
+      <p class="item">お知らせ</p>
+    </div>
     <%= link_to "リニューアルしました。新機能をお試しください！","/", class:"text" %>
   </div>
-    <div class="info">
-    <p class="day">2020.12.11</p>
-    <p class="item">お知らせ</p>
+  <div class="info">
+    <div class="day-item">
+      <p class="day">2020.12.11</p>
+      <p class="item">お知らせ</p>
+    </div>
     <%= link_to "リニューアルしました。新機能をお試しください！","/", class:"text" %>
   </div>
 
