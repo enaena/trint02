@@ -9,11 +9,11 @@ Trint
 https://trint-2nd.herokuapp.com/
 
 ## ID/Pass
-ID: admin
+ID: admin<br>
 Pass: 2222
 
 ## テスト用アカウント
-email:test@com
+email:test@com<br>
 password:111aaa
 
 ## 制作背景(意図)
