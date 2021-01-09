@@ -89,12 +89,12 @@ TOPページの「NEW」ボタンからユーザー登録をします。<br><br>
 イベントの一覧ページはヘッダーの「イベントを探す」ボタンから見ることことができます。<br>
 イベントの概要や主催者を確認することができます。<br><br>
 
-<a href="https://gyazo.com/c51d0692e3a8dd6ae06c5ad793fca11e"><img src="https://i.gyazo.com/c51d0692e3a8dd6ae06c5ad793fca11e.gif" alt="Image from Gyazo" width="1000"/></a>
+<a href="https://gyazo.com/cd7074b2df7354f75bee610f96b195ca"><img src="https://i.gyazo.com/cd7074b2df7354f75bee610f96b195ca.gif" alt="Image from Gyazo" width="996"/></a>
 イベント名をクリックすると、そのイベントの詳細を確認することができます。<br>
 また、詳細ページではそのイベントに参加予定の他のユーザーも確認することができます。<br>
 イベントに参加したい場合は「イベントに参加する」ボタンを押します。<br><br>
 
-<a href="https://gyazo.com/1c5f08189b6c089b32af0435b6b4049b"><img src="https://i.gyazo.com/1c5f08189b6c089b32af0435b6b4049b.gif" alt="Image from Gyazo" width="1000"/></a>
+<a href="https://gyazo.com/eed9f6319470b87f30d2b27b57599119"><img src="https://i.gyazo.com/eed9f6319470b87f30d2b27b57599119.gif" alt="Image from Gyazo" width="998"/></a>
 イベント作成の際に会場のURLを記入した場合は
 イベント詳細ページのアイコンに色がつきページに飛ぶことができます。<br><br>
 
