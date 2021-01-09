@@ -8,6 +8,10 @@ Trint
 ## URL
 https://trint-2nd.herokuapp.com/
 
+## ID/Pass
+ID: admin
+Pass: 2222
+
 ## テスト用アカウント
 email:test@com
 password:111aaa
@@ -71,18 +75,18 @@ password:111aaa
 ・試合結果が送信されるとそのコートの控えの選手に通知がいく<br>
 
 ## 利用方法
-<a href="https://gyazo.com/2bb9d781dba720cfec5a93cf8103bd02"><img src="https://i.gyazo.com/2bb9d781dba720cfec5a93cf8103bd02.gif" alt="Image from Gyazo" width="1000"/></a>
+<a href="https://gyazo.com/8bc7105ef7695861034d12fec7db3307"><img src="https://i.gyazo.com/8bc7105ef7695861034d12fec7db3307.gif" alt="Image from Gyazo" width="1000"/></a>
 TOPページの「NEW」ボタンからユーザー登録をします。<br><br>
 
-<a href="https://gyazo.com/07afd4bc32eab2374e2946fd7aa920f7"><img src="https://i.gyazo.com/07afd4bc32eab2374e2946fd7aa920f7.gif" alt="Image from Gyazo" width="1000"/></a>
+<a href="https://gyazo.com/1dabeaa361630528df8e550da6fdc087"><img src="https://i.gyazo.com/1dabeaa361630528df8e550da6fdc087.gif" alt="Image from Gyazo" width="1000"/></a>
 ユーザー登録が完了するとマイページが作成されます。<br>
 マイページにはユーザー登録の際に入力された内容と主催イベントが表示されます。<br>
 ユーザーは誰でもお互いのページを閲覧することがきます。<br><br>
 
-<a href="https://gyazo.com/61732cc4cfe36dfb3a01ba85206041aa"><img src="https://i.gyazo.com/61732cc4cfe36dfb3a01ba85206041aa.gif" alt="Image from Gyazo" width="1000"/></a>
-フッターの「イベントを作成する」ボタンからイベントを作成できます。<br>
+<a href="https://gyazo.com/7b8aecd470aa106f3fd0116182f51915"><img src="https://i.gyazo.com/7b8aecd470aa106f3fd0116182f51915.gif" alt="Image from Gyazo" width="1000"/></a>
+ヘッダーの「イベントを作成する」ボタンからイベントを作成できます。<br>
 作成されたイベントはイベント一覧ページに表示されます。<br>
-イベントの一覧ページはフッターの「イベントを探す」ボタンから見ることことができます。<br>
+イベントの一覧ページはヘッダーの「イベントを探す」ボタンから見ることことができます。<br>
 イベントの概要や主催者を確認することができます。<br><br>
 
 <a href="https://gyazo.com/c51d0692e3a8dd6ae06c5ad793fca11e"><img src="https://i.gyazo.com/c51d0692e3a8dd6ae06c5ad793fca11e.gif" alt="Image from Gyazo" width="1000"/></a>
