@@ -305,7 +305,9 @@
 }
 
 .event-show-main {
-  margin: 50px 0 0 50px;
+  width: 350px;
+  padding-left: 30px;
+  margin: 0 auto;
 }
 
 .event-show-main .title {
@@ -416,10 +418,11 @@
   }
   .event-show-main {
     margin-left: 0;
+    margin-top: 30px;
+    padding: 0;
   }
   .event-title-mini {
     width: 400px;
-    padding-left: 0;
   }
   .event-title-mini .title {
     font-size: 30px;

@@ -13,8 +13,8 @@ ID: admin<br>
 Pass: 2222
 
 ## テスト用アカウント
-email:test@com<br>
-password:111aaa
+email: test@com<br>
+password: 111aaa
 
 ## 制作背景(意図)
 私自身が趣味でテニスをしており、スクールに通ったり時々一般のトーナメントにも参加しています。<br>
