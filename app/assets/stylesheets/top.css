@@ -31,7 +31,6 @@ header {
   width: 90px;
 }
 
-  color: #d9e021;
 @media (min-width: 601px) {
   .header-right {
     display: -webkit-box;
