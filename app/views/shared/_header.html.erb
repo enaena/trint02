@@ -4,7 +4,6 @@
     <%= link_to image_tag("logo.svg" , class:"header-left logo"), "/" %>
   </div>
 
-<div class='pc-nav'>
   <div class='header-right'>
     <ul class='header-right list'>
       <li><%= link_to "イベントを作成する", new_event_path, class:"text" %></li>
@@ -33,40 +32,5 @@
   <% end %>
 
   </div>
-</div>
-
-<div class='sp-nav'>
-
-  <div class='header-right'>
-    <% if user_signed_in? %>
-      <div class='header-right btn'>
-        <%= link_to "/users/#{current_user.id}", class:"login-btn" do %>
-        <span class='btn-a'><%=current_user.nickname%></span><span class='btn-b'>マイページ</span>
-        <% end %>
-        <%= link_to destroy_user_session_path,method: :delete, class:"login-btn" do %>
-        <span class='btn-a'>LOGOUT</span><span class='btn-c'>ログアウト</span>
-        <% end %>
-      </div>
-    <% else %>
-      <div class='header-right btn'>
-        <%= link_to new_user_session_url, class:"login-btn" do %>
-        <span class='btn-a'>LOGIN</span><span class='btn-b'>ログイン</span>
-        <% end %>
-        <%= link_to new_user_registration_url, class:"login-btn" do %>
-        <span class='btn-a'>NEW</span><span class='btn-b'>新規登録</span>
-        <% end %>
-      </div>
-    <% end %>
-  </div>
-
-  <div class='header-event-btn'>
-    <div class='header-event-btn-text'>
-      <%= link_to "イベント作成", new_event_path, class:"text" %></div>
-    <div class='header-event-btn-text'>
-      <div><%= link_to "イベント検索", events_path, class:"text" %></div>
-    </div>
-  </div>
-
-</div>
 
 </header>
