@@ -28,7 +28,6 @@ header{
   }
 }
 
-@media (min-width: 601px) {
 .header-right{
   display: flex;
   margin-right: 20px;
@@ -97,91 +96,6 @@ header{
   }
 }
 
-  .sp-nav{
-    display: none;
-  }
-}
-
-@media (max-width: 600px) {
-  .pc-nav{
-    display: none;
-  }
-
-  .sp-nav{
-    .header-event-btn{
-      display: flex;
-      flex-direction: column;
-      position: fixed;
-      bottom: 20px;
-      right: 30px;
-      .header-event-btn-text{
-        list-style: none;
-        height: 100px;
-        width: 100px;
-        background-color: $by;
-        border-radius: 50%;
-        margin-bottom: 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .5);
-        .text{
-          font-size: 12px;
-          color: #333333;
-          text-decoration: none;
-          font-weight: bold;
-          letter-spacing: 1px;
-          &:hover{
-            color: $by;
-          }
-        }
-      }
-    }
-    .header-right{
-      display: flex;
-      margin-right: 20px;
-      margin-top: -10px;
-    &.btn{
-      display: flex;
-      & .login-btn{
-        position: relative;
-        width: 100px;
-        height: 35px;
-        margin-left: 20px;
-        & span{
-          position: absolute;
-          top: 10px;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          font-size: 12px;
-          letter-spacing: 1px;
-          font-weight: bold;
-          text-decoration: none;
-          line-height: 35px;
-          text-align: center;
-        }
-        & .btn-b {
-          background-color: $by;
-          color:  black;
-          transform: rotateX(-90deg);
-        }
-        & .btn-a {
-          background-color: white;
-          color: black;
-          transform: rotateX(0);
-        }
-        & .btn-c{
-          background-color: #333333;
-          color: black;
-          color: white;
-          transform: rotateX(-90deg);
-        }
-      }
-    }
-  }
-}
-}
 
 // フッター
 
